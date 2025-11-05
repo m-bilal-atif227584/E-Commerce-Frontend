@@ -89,9 +89,9 @@ export const updateProfile = createAsyncThunk(
       if (userData.email) formData.append('email', userData.email);
       if (userData.avatar) formData.append('avatar', userData.avatar);
 
-      const response = await api.put('/auth/profile/update', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      const response = await api.put('/auth/profile/update', formData
+        // headers: { 'Content-Type': 'multipart/form-data' },
+      );
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || 'Update failed');
