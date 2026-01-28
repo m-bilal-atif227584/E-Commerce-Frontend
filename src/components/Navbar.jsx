@@ -76,8 +76,8 @@ export default function Navbar() {
                   to="/profile"
                   className="flex items-center space-x-1 hover:text-blue-600 transition"
                 >
-                  <User className="h-5 w-5" />
-                  <span className="hidden lg:inline">{user?.name}</span>
+                  { user?.avatar?.url ? (<img src={user.avatar.url} alt={user.name} className='w-8 h-8 rounded-full object-cover' />) : (<><User className="h-5 w-5" />
+                  <span className="hidden lg:inline">{user?.name}</span></>)}
                 </Link>
 
                 <button

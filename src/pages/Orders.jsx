@@ -35,8 +35,6 @@ export default function Orders() {
     );
   }
 
-  // console.log(orders);
-
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +104,7 @@ export default function Orders() {
                     {order?.order_items?.map((item, index) => (
                       <div key={index} className="flex items-center space-x-4">
                         <img
-                          src={item.image}
+                          src={item?.image}
                           alt={item.title}
                           className="w-20 h-20 object-cover rounded-lg"
                         />

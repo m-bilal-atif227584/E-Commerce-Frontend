@@ -25,7 +25,6 @@ export default function Cart() {
   const handleCheckout = () => {
     navigate('/checkout');
   };
-  
 
   if (items.length === 0) {
     return (
@@ -68,7 +67,7 @@ export default function Cart() {
               <div key={item.id} className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={item.image}
+                    src={item?.image?.url}
                     alt={item.name}
                     className="w-24 h-24 object-cover rounded-lg"
                   />

@@ -57,7 +57,7 @@ export default function Products() {
                 value={aiPrompt}
                 onChange={(e) => setAiPrompt(e.target.value)}
                 placeholder="e.g., 'I need a laptop for gaming under $1000'"
-                className="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none border border-black focus:ring-2 focus:ring-blue-300"
               />
               <button
                 type="submit"
